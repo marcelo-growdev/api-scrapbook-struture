@@ -5,7 +5,7 @@ import checkCard from './app/middlewares/checkCard';
 
 const routes = Router();
 
-routes.get('/', (req, res) => res.json('TEST-API'));
+routes.get('/', (req, res) => res.json('API-SCRAPBOOK-STRUTURE'));
 
 routes.get('/cards', CardController.index);
 routes.get('/cards/:id', checkCard, CardController.show);
