@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import cors from 'cors';
 
 import UserController from './app/controllers/UserController';
 import AuthController from './app/controllers/AuthController';
@@ -8,6 +9,8 @@ import authMiddleware from './app/middlewares/auth';
 import checkCard from './app/middlewares/checkCard';
 
 const routes = Router();
+
+routes.use(cors());
 
 routes.get('/', (req, res) => res.json('API-SCRAPBOOK-STRUTURE'));
 routes.post('/users', UserController.store);
