@@ -9,6 +9,7 @@ class App {
 
     this.middlewares();
     this.routes();
+    this.server.use(express.static('dist'));
   }
 
   middlewares() {
